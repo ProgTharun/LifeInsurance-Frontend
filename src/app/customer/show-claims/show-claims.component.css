@@ -1,0 +1,190 @@
+.wrapper {
+  background-color: #fdfdfd;
+  padding: 20px;
+  min-height: 93vh;
+}
+
+/* Top link styles */
+.top_link .btn-back {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add New Plan button */
+#button {
+  margin: 1rem 0;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Container styles */
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Row and column styles */
+.row {
+  margin-bottom: 1rem;
+}
+
+/* Form styles */
+.form-select,
+.form-control {
+  width: auto;
+  max-width: 300px;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+}
+
+.btn-search {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-reset {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead tr {
+  background-color: #343a40; /* Dark header */
+  color: #fff; /* White text */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr td {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Status styles */
+.status-active {
+  color: green;
+}
+
+.status-inactive {
+  color: red;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 0.25rem;
+}
+
+.page-item .page-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Claim Status Badges */
+.badge {
+  font-size: 0.875rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+}
+
+.bg-warning {
+  background-color: #ffc107;
+}
+
+.bg-success {
+  background-color: #28a745;
+}
+
+.bg-danger {
+  background-color: #dc3545;
+}
+
+/* Reject Box */
+.reject-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+}
+
+.reject-box .form-label {
+  font-weight: bold;
+}
+
+.reject-box .btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.reject-box .btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Inline Reject Box Textarea */
+.readonly-field {
+  background-color: #f1f1f1;
+  border-color: #ccc;
+}
+
+/* Footer */
+app-footer-end {
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,99 @@
+/* Container Styles */
+.registration-form-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #f4f7fc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #2a3c52;
+  margin-bottom: 20px;
+}
+
+/* Table Layout for Form */
+.form-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.form-table td {
+  padding: 12px;
+  vertical-align: top;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-table td label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form-table td input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-table td input:focus {
+  border-color: #00416a;
+  box-shadow: 0 0 5px rgba(0, 65, 106, 0.5);
+  outline: none;
+}
+
+/* Error Messages */
+.error {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+/* Submit Button */
+.btn-register {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  background: #00416a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+  background: #0075b2;
+  transform: scale(1.05);
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.toggle-password i {
+  color: #555;
+}
+
+.toggle-password:hover i {
+  color: #00416a;
+}

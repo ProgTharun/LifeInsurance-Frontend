@@ -1,0 +1,40 @@
+<app-admin-header></app-admin-header>
+
+<div class="wrapper">
+    <div class="top_link">
+        <!-- <button (click)="goBack()" class="btn-back ms-3 mt-2">
+            <img
+                src="https://drive.google.com/u/0/uc?id=16U__U5dJdaTfNGobB_OpwAJ73vM50rPV&export=download"
+                alt=""
+            />
+            Back
+        </button> -->
+    </div>
+
+    <div class="container" id="addAgent">
+        <h2 class="heading" id="Label">Register Insurance Plan</h2>
+        <form [formGroup]="addPlanForm">
+            <div class="form-group">
+                <input
+                    type="text"
+                    formControlName="planName"
+                    class="form-control"
+                    placeholder="PLAN NAME*"
+                />
+                <div *ngIf="addPlanForm.get('planName')?.dirty && addPlanForm.get('planName')?.hasError('required')" class="error-message">
+                    *Plan Name is required.
+                </div>
+                <div *ngIf="addPlanForm.get('planName')?.dirty && addPlanForm.get('planName')?.hasError('onlyCharacters')" class="error-message">
+                    *{{addPlanForm.get('planName')?.getError('onlyCharacters').message}}
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="button" class="btn btn-cancel" (click)="OnCancel()">Cancel</button>
+                <button type="button" class="btn btn-register" (click)="addPlan()">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <app-footer-end></app-footer-end>
+</div>

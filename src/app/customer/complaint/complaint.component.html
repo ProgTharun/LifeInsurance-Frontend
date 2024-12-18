@@ -1,0 +1,45 @@
+<app-customer-header></app-customer-header>
+<div class="wrapper">
+  <div class="top_link">
+    <!-- <button (click)="goBack()" class="btn-back ms-3 mt-2">Back</button> -->
+  </div>
+
+  <div class="container" id="addComplaint">
+    <h2 class="heading" id="Label">Add Complaint</h2>
+    <form class="row g-2" [formGroup]="addComplaintForm">
+      
+      <div class="col-md-12 form-group">
+        <input
+          type="text"
+          formControlName="title"
+          class="form-control"
+          placeholder="TITLE*"
+        />
+        <div *ngIf="addComplaintForm.get('title')?.dirty && addComplaintForm.get('title')?.hasError('required')" class="error-message">
+          *Title is required.
+        </div>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <textarea
+          formControlName="message"
+          class="form-control"
+          placeholder="DESCRIPTION*"
+          cols="40"
+          rows="5"
+        ></textarea>
+        <div *ngIf="addComplaintForm.get('message')?.dirty && addComplaintForm.get('message')?.hasError('required')" class="error-message">
+          *Description is required.
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="button" class="btn btn-cancel" >Cancel</button>
+        <button type="button" class="btn btn-info" (click)="addComplaint()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-footer-end></app-footer-end>
+

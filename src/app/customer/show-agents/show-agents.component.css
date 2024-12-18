@@ -1,0 +1,185 @@
+.wrapper {
+  background-color: #fdfdfd;
+  padding: 20px;
+  min-height: 93vh;
+}
+
+/* Top link styles */
+.top_link .btn-back {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add New Plan button */
+#button {
+  margin: 1rem 0;
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Container styles */
+.container {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Row and column styles */
+.row {
+  margin-bottom: 1rem;
+}
+
+/* Form styles */
+.form-select,
+.form-control {
+  width: auto;
+  max-width: 300px;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+}
+
+.btn-search {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.btn-reset {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table thead tr {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr td {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Status styles */
+.status-active {
+  color: green;
+}
+
+.status-inactive {
+  color: red;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-item {
+  margin: 0 0.25rem;
+}
+
+.page-item .page-link {
+  color: #007bff;
+  text-decoration: none;
+  padding: 0.375rem 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.page-item.disabled .page-link {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Modal styles */
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-header .btn-close {
+  color: #000;
+}
+
+/* Button styles for modal */
+.btn-close,
+.btn-secondary,
+.btn-danger {
+  padding: 0.375rem 0.75rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+/* Button styles for agent table */
+.btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  color: #fff;
+}
+
+/* Search bar styles */
+.search-container input {
+  max-width: 300px;
+}
+
+.search-container .btn-search {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.search-container .btn-reset {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}

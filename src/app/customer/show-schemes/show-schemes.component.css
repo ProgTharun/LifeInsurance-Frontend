@@ -1,0 +1,177 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Wrapper Styles */
+.wrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  color: #4a90e2;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+/* Match the focus color with the Plan Schemes page */
+.form-control:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Error Message Styles */
+.error-message {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Button Colors for Register and Cancel */
+.btn-cancel {
+  background-color: #e1e1e1;
+  color: #333;
+}
+
+.btn-register {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+/* Hover Effects for Buttons */
+.btn-cancel:hover {
+  background-color: #d4d4d4;
+}
+
+.btn-register:hover {
+  background-color: #357ab7;
+}
+
+/* Pagination Container */
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.pagination .page-item .page-link {
+  color: #4a90e2;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #ccc;
+  pointer-events: none;
+}
+
+/* Search and Select Box Styles */
+.search-container input {
+  width: 75%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.search-container button:hover {
+  background-color: #357ab7;
+}
+
+/* Select Box Styling */
+.form-select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+/* Table Styling */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table-dark th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.table-striped tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.table-bordered td, .table-bordered th {
+  border: 1px solid #ddd;
+}
+
+.table td, .table th {
+  padding: 12px;
+  text-align: center;
+}
+
+.table td button {
+  margin: 0 5px;
+}
+
+/* Alignment for Back Button */
+.top_link {
+  text-align: left;
+ 
+}

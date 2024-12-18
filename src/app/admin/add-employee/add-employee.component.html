@@ -1,0 +1,59 @@
+<app-admin-header></app-admin-header>
+<div class="wrapper">
+  <div class="top_link">
+      <!-- <button (click)="goBack()" class="btn-back ms-3 mt-2">Back</button> -->
+  </div>
+  <div class="container" id="addEmployee">
+      <h2 class="heading" id="Label">Register Employee</h2>
+      <form [formGroup]="addEmployeeForm">
+          <div class="form-group">
+              <input type="text" formControlName="employeeFirstName" class="form-control" placeholder="First Name*" />
+              <small *ngIf="addEmployeeForm.get('employeeFirstName')?.dirty && addEmployeeForm.get('employeeFirstName')?.hasError('required')" class="error-message">*First Name is required.</small>
+              <small *ngIf="addEmployeeForm.get('employeeFirstName')?.dirty && addEmployeeForm.get('employeeFirstName')?.hasError('minlength')" class="error-message">*Minimum 3 characters are required.</small>
+              <small *ngIf="addEmployeeForm.get('employeeFirstName')?.dirty && addEmployeeForm.get('employeeFirstName')?.hasError('onlyCharacters')" class="error-message">*{{addEmployeeForm.get('employeeFirstName')?.getError('onlyCharacters').message}}</small>
+          </div>
+
+          <div class="form-group">
+              <input type="text" formControlName="employeeLastName" class="form-control" placeholder="Last Name*" />
+              <small *ngIf="addEmployeeForm.get('employeeLastName')?.dirty && addEmployeeForm.get('employeeLastName')?.hasError('required')" class="error-message">*Last Name is required.</small>
+              <small *ngIf="addEmployeeForm.get('employeeLastName')?.dirty && addEmployeeForm.get('employeeLastName')?.hasError('onlyCharacters')" class="error-message">*{{addEmployeeForm.get('employeeLastName')?.getError('onlyCharacters').message}}</small>
+          </div>
+
+          <div class="form-group">
+              <input type="text" formControlName="userName" class="form-control" placeholder="Username*" />
+              <small *ngIf="addEmployeeForm.get('userName')?.dirty && addEmployeeForm.get('userName')?.hasError('required')" class="error-message">*User Name is required.</small>
+              <small *ngIf="addEmployeeForm.get('userName')?.dirty && addEmployeeForm.get('userName')?.hasError('minlength')" class="error-message">*Minimum 6 characters are required.</small>
+          </div>
+
+          <div class="form-group">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password*" />
+              <small *ngIf="addEmployeeForm.get('password')?.dirty && addEmployeeForm.get('password')?.hasError('required')" class="error-message">*Password is required.</small>
+              <small *ngIf="addEmployeeForm.get('password')?.dirty && addEmployeeForm.get('password')?.hasError('passwordValidator')" class="error-message" [innerHTML]=" addEmployeeForm.get('password')?.getError('passwordValidator').message"></small>
+          </div>
+
+          <div class="form-group">
+              <input type="email" formControlName="email" class="form-control" placeholder="Email*" />
+              <small *ngIf="addEmployeeForm.get('email')?.dirty && addEmployeeForm.get('email')?.hasError('required')" class="error-message">*Email is required.</small>
+              <small *ngIf="addEmployeeForm.get('email')?.dirty && addEmployeeForm.get('email')?.hasError('email')" class="error-message">*Invalid format.</small>
+          </div>
+
+          <div class="form-group">
+              <input type="text" formControlName="phone" class="form-control" placeholder="Mobile Number*" />
+              <small *ngIf="addEmployeeForm.get('phone')?.dirty && addEmployeeForm.get('phone')?.hasError('required')" class="error-message">*Mobile No. is required.</small>
+              <small *ngIf="addEmployeeForm.get('phone')?.dirty && addEmployeeForm.get('phone')?.hasError('pattern')" class="error-message">*Invalid format</small>
+          </div>
+
+          <div class="form-group">
+              <input type="number" formControlName="salary" class="form-control" placeholder="Salary*" />
+              <small *ngIf="addEmployeeForm.get('salary')?.dirty && addEmployeeForm.get('salary')?.hasError('required')" class="error-message">*Salary is required.</small>
+              <small *ngIf="addEmployeeForm.get('salary')?.dirty && addEmployeeForm.get('salary')?.hasError('min')" class="error-message">*Salary must be greater than 0.</small>
+          </div>
+      </form>
+
+      <div class="buttons-row">
+          <button type="button" class="btn btn-cancel" (click)="onCancel()">Cancel</button>
+          <button id="save" type="button" class="btn btn-register" (click)="addEmployee()">Register</button>
+      </div>
+  </div>
+</div>
+<app-footer-end></app-footer-end>

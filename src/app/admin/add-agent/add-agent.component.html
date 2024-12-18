@@ -1,0 +1,89 @@
+<!-- Modal -->
+ <app-admin-header></app-admin-header>
+<div class="wrapper">
+  <!-- <app-employee-header></app-employee-header> -->
+  <div class="top_link">
+    <!-- <button (click)="goBack()" class="btn-back ms-3 mt-2">Back</button> -->
+  </div>
+  
+  <div class="container" id="addAgent">
+    <h2 class="heading" id="Label">Register Agent</h2>
+    <form [formGroup]="addAgentForm">
+      
+      <div class="form-group">
+        <input type="text" formControlName="agentFirstName" class="form-control" placeholder="FIRST NAME*" />
+        <div *ngIf="addAgentForm.get('agentFirstName')?.dirty && addAgentForm.get('agentFirstName')?.hasError('required')" class="error-message">
+          *First Name is required.
+        </div>
+        <div *ngIf="addAgentForm.get('agentFirstName')?.dirty && addAgentForm.get('agentFirstName')?.hasError('minlength')" class="error-message">
+          *Minimum 3 characters are required.
+        </div>
+        <div *ngIf="addAgentForm.get('agentFirstName')?.dirty && addAgentForm.get('agentFirstName')?.hasError('onlyCharacters')" class="error-message">
+          *{{addAgentForm.get("agentFirstName")?.getError("onlyCharacters").message}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" formControlName="agentLastName" class="form-control" placeholder="LAST NAME*" />
+        <div *ngIf="addAgentForm.get('agentLastName')?.dirty && addAgentForm.get('agentLastName')?.hasError('required')" class="error-message">
+          *Last Name is required.
+        </div>
+        <div *ngIf="addAgentForm.get('agentLastName')?.dirty && addAgentForm.get('agentLastName')?.hasError('onlyCharacters')" class="error-message">
+          *{{addAgentForm.get("agentLastName")?.getError("onlyCharacters").message}}
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="userName" formControlName="userName" class="form-control" placeholder="USERNAME*" />
+        <div *ngIf="addAgentForm.get('userName')?.dirty && addAgentForm.get('userName')?.hasError('required')" class="error-message">
+          *User Name is required.
+        </div>
+        <div *ngIf="addAgentForm.get('userName')?.dirty && addAgentForm.get('userName')?.hasError('minlength')" class="error-message">
+          *Minimum 6 characters are required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="password" formControlName="password" class="form-control" placeholder="PASSWORD*" />
+        <div *ngIf="addAgentForm.get('password')?.dirty && addAgentForm.get('password')?.hasError('required')" class="error-message">
+          *Password is required.
+        </div>
+        <div *ngIf="addAgentForm.get('password')?.dirty && addAgentForm.get('password')?.hasError('passwordValidator')" class="error-message" [innerHTML]=" addAgentForm.get('password')?.getError('passwordValidator').message"></div>
+      </div>
+
+      <div class="form-group">
+        <input type="string" formControlName="qualification" class="form-control" placeholder="Qualification*" />
+        <div *ngIf="addAgentForm.get('qualification')?.dirty && addAgentForm.get('qualification')?.hasError('required')" class="error-message">
+          *Qualification is required.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="email" formControlName="email" class="form-control" aria-describedby="emailHelp" placeholder="EMAIL*" />
+        <div *ngIf="addAgentForm.get('email')?.dirty && addAgentForm.get('email')?.hasError('required')" class="error-message">
+          *Email is required.
+        </div>
+        <div *ngIf="addAgentForm.get('email')?.dirty && addAgentForm.get('email')?.hasError('email')" class="error-message">
+          *Invalid format.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" formControlName="phone" class="form-control" placeholder="MOBILE NUMBER*" />
+        <div *ngIf="addAgentForm.get('phone')?.dirty && addAgentForm.get('phone')?.hasError('required')" class="error-message">
+          *Mobile No. is required.
+        </div>
+        <div *ngIf="addAgentForm.get('phone')?.dirty && addAgentForm.get('phone')?.hasError('pattern')" class="error-message">
+          *Invalid format.
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="button" class="btn btn-cancel" (click)="onCancel()">Cancel</button>
+        <button id="save" type="button" class="btn btn-register" (click)="addAgent()">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-footer-end></app-footer-end>
